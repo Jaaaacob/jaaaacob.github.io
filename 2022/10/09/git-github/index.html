@@ -16,22 +16,22 @@
   <meta name="author" content="Jacob Young">
   <meta name="keywords" content="">
   
-    <meta name="description" content="好奇与想象我就读于武汉大学自动化专业，这个博客记录我的思想与技巧。 正如你所见，好奇与想象是我对自己的定义，想象是我探索开阔世界的工具，好奇则是我不断前进的动力。 博客处于初创阶段，具有许多不完美的地方，希望读者能提出珍贵的建议， 衷心希望这里能拥有少许知识的美。 end">
+    <meta name="description" content="解决 Load keys “XXXXXXXX” invalid format 问题在我电脑新建一个git本地库链接到远程github仓库的时候，push代码总会出现 invalid format 的error， 针对这一问题解决方法如下： 确保启用ssh代理bash1eval &quot;$(ssh-agent -s)&quot;  为 SSH key 启用 SSH 代理bash1ssh-add">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Some Introduction about Me">
-<meta property="og:url" content="http://example.com/2022/09/28/Some-Introduction-about-Me/index.html">
+<meta property="og:title" content="git -&gt; github">
+<meta property="og:url" content="http://example.com/2022/10/09/git-github/index.html">
 <meta property="og:site_name" content="Jacob&#39;s Blog">
-<meta property="og:description" content="好奇与想象我就读于武汉大学自动化专业，这个博客记录我的思想与技巧。 正如你所见，好奇与想象是我对自己的定义，想象是我探索开阔世界的工具，好奇则是我不断前进的动力。 博客处于初创阶段，具有许多不完美的地方，希望读者能提出珍贵的建议， 衷心希望这里能拥有少许知识的美。 end">
+<meta property="og:description" content="解决 Load keys “XXXXXXXX” invalid format 问题在我电脑新建一个git本地库链接到远程github仓库的时候，push代码总会出现 invalid format 的error， 针对这一问题解决方法如下： 确保启用ssh代理bash1eval &quot;$(ssh-agent -s)&quot;  为 SSH key 启用 SSH 代理bash1ssh-add">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-28T05:17:37.000Z">
-<meta property="article:modified_time" content="2022-09-28T05:44:49.565Z">
+<meta property="article:published_time" content="2022-10-09T04:29:42.000Z">
+<meta property="article:modified_time" content="2022-10-09T04:49:20.243Z">
 <meta property="article:author" content="Jacob Young">
-<meta property="article:tag" content="Wuhan University">
+<meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Some Introduction about Me - Jacob&#39;s Blog</title>
+  <title>git -&gt; github - Jacob&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Some Introduction about Me"></span>
+            <span id="subtitle" data-typed-text="git -&gt; github"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-28 13:17" pubdate>
-          2022年9月28日 下午
+        <time datetime="2022-10-09 12:29" pubdate>
+          2022年10月9日 中午
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          132 字
+          464 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          2 分钟
+          4 分钟
         
       </span>
     
@@ -268,16 +268,25 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Some Introduction about Me</h1>
+            <h1 style="display: none">git -&gt; github</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="好奇与想象"><a href="#好奇与想象" class="headerlink" title="好奇与想象"></a>好奇与想象</h1><p>我就读于武汉大学自动化专业，这个博客记录我的思想与技巧。</p>
-<p>正如你所见，好奇与想象是我对自己的定义，想象是我探索开阔世界的工具，好奇则是我不断前进的动力。</p>
-<p>博客处于初创阶段，具有许多不完美的地方，希望读者能提出珍贵的建议，</p>
-<p>衷心希望这里能拥有少许知识的美。</p>
-<p>end</p>
+                <h2 id="解决-Load-keys-“XXXXXXXX”-invalid-format-问题"><a href="#解决-Load-keys-“XXXXXXXX”-invalid-format-问题" class="headerlink" title="解决 Load keys “XXXXXXXX” invalid format 问题"></a>解决 Load keys “XXXXXXXX” invalid format 问题</h2><p>在我电脑新建一个git本地库链接到远程github仓库的时候，push代码总会出现 invalid format 的error， 针对这一问题解决方法如下：</p>
+<h4 id="确保启用ssh代理"><a href="#确保启用ssh代理" class="headerlink" title="确保启用ssh代理"></a>确保启用ssh代理</h4><figure class="highlight plaintext"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Linux">eval &quot;$(ssh-agent -s)&quot;<br></code></pre></td></tr></table></figure>
+
+<h4 id="为-SSH-key-启用-SSH-代理"><a href="#为-SSH-key-启用-SSH-代理" class="headerlink" title="为 SSH key 启用 SSH 代理"></a>为 SSH key 启用 SSH 代理</h4><figure class="highlight plaintext"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Linux">ssh-add ~/.ssh/id_rsa<br></code></pre></td></tr></table></figure>
+
+<h4 id="检查是否能连接github"><a href="#检查是否能连接github" class="headerlink" title="检查是否能连接github"></a>检查是否能连接github</h4><figure class="highlight plaintext"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Linux">ssh -T git@github.com<br></code></pre></td></tr></table></figure>
+
+<p>如果出现了</p>
+<figure class="highlight plaintext"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Linux">Hi Jaaaacob! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.<br></code></pre></td></tr></table></figure>
+
+<p>是正常现象，对push路径进行设置后即可正常push</p>
+<figure class="highlight plaintext"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs Linux">git remote add origin git@github.com:XXXX/XXXX.git<br>git push -u origin master<br></code></pre></td></tr></table></figure>
+
+<p>此种解决方法仅限于作者电脑的环境，在不同环境下产生相同报错不一定能解决，此方法仅供参考</p>
 
                 
               </div>
@@ -290,7 +299,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Wuhan-University/">#Wuhan University</a>
+        <a href="/tags/git/">#git</a>
       
     </div>
   
@@ -302,8 +311,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Some Introduction about Me</div>
-      <div>http://example.com/2022/09/28/Some-Introduction-about-Me/</div>
+      <div>git -&gt; github</div>
+      <div>http://example.com/2022/10/09/git-github/</div>
     </div>
     <div class="license-meta">
       
@@ -315,7 +324,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月28日</div>
+          <div>2022年10月9日</div>
         </div>
       
       
@@ -347,15 +356,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/10/09/git-github/" title="git -&gt; github">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">git -&gt; github</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2022/09/28/Some-Introduction-about-Me/" title="Some Introduction about Me">
+                        <span class="hidden-mobile">Some Introduction about Me</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>

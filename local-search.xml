@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>git -&gt; github</title>
+    <link href="/2022/10/09/git-github/"/>
+    <url>/2022/10/09/git-github/</url>
+    
+    <content type="html"><![CDATA[<h2 id="解决-Load-keys-“XXXXXXXX”-invalid-format-问题"><a href="#解决-Load-keys-“XXXXXXXX”-invalid-format-问题" class="headerlink" title="解决 Load keys “XXXXXXXX” invalid format 问题"></a>解决 Load keys “XXXXXXXX” invalid format 问题</h2><p>在我电脑新建一个git本地库链接到远程github仓库的时候，push代码总会出现 invalid format 的error， 针对这一问题解决方法如下：</p><h4 id="确保启用ssh代理"><a href="#确保启用ssh代理" class="headerlink" title="确保启用ssh代理"></a>确保启用ssh代理</h4><figure class="highlight plaintext"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Linux">eval &quot;$(ssh-agent -s)&quot;<br></code></pre></td></tr></table></figure><h4 id="为-SSH-key-启用-SSH-代理"><a href="#为-SSH-key-启用-SSH-代理" class="headerlink" title="为 SSH key 启用 SSH 代理"></a>为 SSH key 启用 SSH 代理</h4><figure class="highlight plaintext"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Linux">ssh-add ~/.ssh/id_rsa<br></code></pre></td></tr></table></figure><h4 id="检查是否能连接github"><a href="#检查是否能连接github" class="headerlink" title="检查是否能连接github"></a>检查是否能连接github</h4><figure class="highlight plaintext"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Linux">ssh -T git@github.com<br></code></pre></td></tr></table></figure><p>如果出现了</p><figure class="highlight plaintext"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Linux">Hi Jaaaacob! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.<br></code></pre></td></tr></table></figure><p>是正常现象，对push路径进行设置后即可正常push</p><figure class="highlight plaintext"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs Linux">git remote add origin git@github.com:XXXX/XXXX.git<br>git push -u origin master<br></code></pre></td></tr></table></figure><p>此种解决方法仅限于作者电脑的环境，在不同环境下产生相同报错不一定能解决，此方法仅供参考</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Some Introduction about Me</title>
     <link href="/2022/09/28/Some-Introduction-about-Me/"/>
     <url>/2022/09/28/Some-Introduction-about-Me/</url>
